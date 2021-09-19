@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop a Balloon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-app.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-auth.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-firestore.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section id="create">
+        <div>
+            <label>username:
+                <input type="text" placeholder="Enter username" id="username">
+            </label>
+            <label>Email:
+                <input type="text" placeholder="Enter Email" id="Email">
+            </label>
+            <br>
+            <label>Password:
+                <input type="password" placeholder="Enter password" id="password">
+            </label>
+            <br>
+            <label>Confirm Password:
+                <input type="password" placeholder="Enter password" id="conpassword">
+            </label>
+            <button onclick="signup()">Signup</button>
+            <div id="loginScreen">
+                <button id="loginwithgmail" class="loginwithgmail"> <i class="fa fa-google-plus"></i></button>
+            </div>
+
+
+
+        </div>
+    </section>
+    <section id="login">
+        <nav>
+            <div>
+                <label>Email:
+                    <input type="text" placeholder="Enter username" id="email">
+                </label>
+                <br>
+                <label>Password:
+                    <input type="password" placeholder="Enter password" id="password">
+                </label>
+                <br>
+                <button onclick="login()">login</button>
+                <button onclick="createacc()">Create Account</button>
+
+            </div>
+        </nav>
+    </section>
+    <section id="level1">
+        <div id="dashboard">
+            <div id="userDetails"></div>
+            <button id="logOut">LogOut</button>
+        </div>
+        <div class="wrapper">
+            <p>your life is: <span id="life">5</span></p>
+            <p>your score is : <span id="score">0</span></p>
+            <h1>Pop the Red balloons by moving</br>your mouse over them</h1>
+            <button id="start" onclick="start()">start</button>
+            <button id="stop" onclick="stop()">stop</button>
+            <div id="balloon-gallery">
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+                <div class="balloon_red"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
